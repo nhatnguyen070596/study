@@ -1,0 +1,54 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>net7.0</TargetFramework>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+  </PropertyGroup>
+
+  <PropertyGroup Condition=" '$(RunConfiguration)' == 'https' " />
+  <PropertyGroup Condition=" '$(RunConfiguration)' == 'http' " />
+  <ItemGroup>
+    <PackageReference Include="Microsoft.AspNetCore.OpenApi" Version="7.0.9" />
+    <PackageReference Include="Swashbuckle.AspNetCore" Version="6.5.0" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Tools" Version="7.0.9">
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+      <PrivateAssets>all</PrivateAssets>
+    </PackageReference>
+    <PackageReference Include="Microsoft.EntityFrameworkCore" Version="7.0.9" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer" Version="7.0.9" />
+    <PackageReference Include="Confluent.Kafka" Version="2.2.0" />
+    <PackageReference Include="StackExchange.Redis" Version="2.6.122" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Remove="Repositories\" />
+    <None Remove="Repositories\Interface\" />
+    <None Remove="Strategies\" />
+    <None Remove="Strategies\Shipping\" />
+    <None Remove="Strategies\Shipping\Context\" />
+    <None Remove="Strategies\Shipping\Interface\" />
+    <None Remove="Strategies\Concrete\" />
+    <None Remove="Strategies\Concrete\Interface\" />
+    <None Remove="Strategies\Concrete\Context\" />
+    <None Remove="Services\" />
+    <None Remove="Services\Interface\" />
+    <None Remove="Utility\" />
+    <None Remove="Repositories\Abtract\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Repositories\" />
+    <Folder Include="Repositories\Interface\" />
+    <Folder Include="Strategies\" />
+    <Folder Include="Strategies\Shipping\" />
+    <Folder Include="Strategies\Shipping\Context\" />
+    <Folder Include="Strategies\Shipping\Interface\" />
+    <Folder Include="Strategies\Concrete\" />
+    <Folder Include="Strategies\Concrete\Interface\" />
+    <Folder Include="Strategies\Concrete\Context\" />
+    <Folder Include="Services\" />
+    <Folder Include="Services\Interface\" />
+    <Folder Include="Utility\" />
+    <Folder Include="Repositories\Abtract\" />
+  </ItemGroup>
+</Project>
